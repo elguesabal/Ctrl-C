@@ -1,0 +1,44 @@
+.demonstracao2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.demonstracao2 #iframe {
+    width: 70vw;
+    height: 70vh;
+    /* width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    top: 0; */
+}
+
+#telaCheia {
+    background-color: yellowgreen;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 30vh;
+}
+
+.codigo {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0 50px 0;
+}
+
+.codigo .textareCodigo {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    background-color: rgba(240, 248, 255, 0.4);
+    border: 0;
+    height: 100px;
+    width: 30vw;
+    z-index: 1;
+}
