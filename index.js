@@ -1,7 +1,7 @@
 // npm i express
 // npm install --save-dev nodemon
 // npm install cors
-// npm i mysql
+// npm i mysql                          ANTIGO BANCO DE DADOS LOCAL
 // npm install dotenv mysql2
 // npm install handlebars
 // npm i express-handlebars
@@ -69,10 +69,6 @@ app.get('/teste', (req, res) => {
 })
 
 
-// app.get('/codigo', (req, res) => {
-//     const id = req.query.id
-//     console.log(id)
-// })
 
 app.get('/codigo', (req, res) => {
 
