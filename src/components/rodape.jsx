@@ -1,4 +1,8 @@
+import url from "./url"
+
 function Rodape() {
+
+    const rotaMensagem = url + '/mensagem'
 
     return (
         <footer>
@@ -27,17 +31,17 @@ function Rodape() {
                         </div>
 
                         <div class="col-md-4 offset-md-1">
-                            <form>
+                            <form action={rotaMensagem} method="post">
                                 <h1 class="h3 mb-3 fw-normal">Deixe sua mensagem!</h1>
 
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                                    <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
                                     <label for="floatingInput">Email de contato</label>
                                 </div>
                                 <br />
                                 <div>
                                     <label class="form-label">Mensagem:</label>
-                                    <textarea class="form-control" rows="3"></textarea>
+                                    <textarea class="form-control" name="mensagem" rows="3"></textarea>
                                 </div>
                                 <br />
                                 <button class="w-100 btn btn-lg btn-primary" type="submit">Enviar</button>
