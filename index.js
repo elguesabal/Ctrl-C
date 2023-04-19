@@ -55,7 +55,9 @@ const conn = mysql.createConnection(process.env.DATABASE_URL)               // N
 
 
 
-
+app.get('/', (req, res) => {
+    req.send('deu certo')
+})
 
 app.get('/teste', (req, res) => {
     const sql = `SELECT * FROM codigo WHERE id = 1`
