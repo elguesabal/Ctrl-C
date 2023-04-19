@@ -11,7 +11,7 @@ function Codigo() {
     useEffect(() => {
         const buscaId = window.location.search;
         
-        api.get(`http://localhost:5000/codigo${buscaId}`)
+        api.get(`${url}/codigo${buscaId}`)
         .then(res => {
             document.getElementById('iframe').innerHTML += res.data.html
             document.getElementById('iframe').innerHTML += res.data.css
@@ -41,19 +41,19 @@ function Codigo() {
                 <div class="textareCodigo">
                     <span>HTML:</span>
                     <textarea id="html">
-                        aaa
+
                     </textarea>
                 </div>
                 <div class="textareCodigo">
                     <span>CSS:</span>
                     <textarea id="css">
-                        aaa
+
                     </textarea>
                 </div>
                 <div class="textareCodigo">
                     <span>JavaScript:</span>
                     <textarea id="javascript">
-                        aaa
+
                     </textarea>
                 </div>
             </div>
