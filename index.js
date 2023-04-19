@@ -25,7 +25,11 @@ app.use(cors())
 // npm install handlebars
 // npm i express-handlebars
 const exphbs = require('express-handlebars')
-app.engine('handlebars', exphbs.engine())
+const path = require('path')
+app.engine('handlebars', exphbs.engine({
+    defaultLayout: 'main',
+    layoutsDir: path.join(__dirname, 'views')
+}))
 app.set('view engine', 'handlebars')
 
 // npm i mysql
