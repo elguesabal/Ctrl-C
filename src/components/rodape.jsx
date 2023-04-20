@@ -23,9 +23,10 @@ function Rodape() {
                         <div class="col-6 col-md-2 m-auto">
                             <h5>Sobre o autor</h5>
                             <ul class="nav flex-column">
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Portfolio</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">LinkedIn</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">GitHub</a></li>
+                                <li class="nav-item mb-2"><a href="https://jose-antonio.vercel.app/" target="_blank" class="nav-link p-0 text-body-secondary">Portfolio</a></li>
+                                <li class="nav-item mb-2"><a href="https://www.canva.com/design/DAFTzR3VmGY/qLmFQigCW6Y8hRZ8Ly7gew/view?utm_content=DAFTzR3VmGY&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel" target="_blank" class="nav-link p-0 text-body-secondary">Currículo</a></li>
+                                <li class="nav-item mb-2"><a href="https://www.linkedin.com/in/jos%C3%A9-antonio-b14160240/" target="_blank" class="nav-link p-0 text-body-secondary">LinkedIn</a></li>
+                                <li class="nav-item mb-2"><a href="https://github.com/elguesabal" target="_blank" class="nav-link p-0 text-body-secondary">GitHub</a></li>
 
                             </ul>
                         </div>
