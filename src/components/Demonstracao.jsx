@@ -37,10 +37,29 @@ function Demonstracao() {
 
     return (
         <main>
-            <h1>Ctrl c</h1>
 
-            <h2>Site feito para programadores <strike>preguiçosos</strike> que buscam códigos rápidos e de qualidade</h2>
-            <br/>
+            <hr/>
+
+            <div class="demonstracao">
+                <div class="informacoes">
+                    <p>{descricao}</p>
+                    <details>
+                        <summary>Tecnologias usadas</summary>
+                        <ol>
+                            <li id="tecHtml">HTML5: {tecHtml}</li>
+                            <li id="tecCss">CSS3: {tecCss}</li>
+                            <li id="tecJavascript">JavaScript: {tecJavascript}</li>
+                        </ol>
+                    </details>
+                    <div class="link">
+                        <a href={linkVerCompleto} target="_blank">Ver completo</a>
+                        <a href={linkVerCodigo}>Ver código</a>
+                    </div>
+                </div>
+
+                <iframe src={linkIframe}></iframe>
+            </div>
+
             <hr/>
 
             <div class="demonstracao">
