@@ -73,7 +73,7 @@ const nodemailer = require('nodemailer')
 
 
 app.get('/', (req, res) => {
-    req.send('deu certo')
+    res.send('deu certo')
 })
 
 app.get('/teste', (req, res) => {
@@ -93,6 +93,23 @@ app.get('/teste', (req, res) => {
 
 
 
+app.get('/codigos', (req, res) => {
+
+  const sql = `SELECT * FROM codigo`
+
+  conn.query(sql, function (err, data) {
+      if (err) {
+          console.log(err)
+          return
+      }
+
+      const codigo = data
+      res.json(codigo)
+  })
+})
+
+
+
 app.get('/codigo', (req, res) => {
 
     const id = req.query.id
@@ -105,20 +122,7 @@ app.get('/codigo', (req, res) => {
         }
 
         const codigo = data[0]
-
-        res.json(
-            {
-                "id": codigo.id,
-                "secao": codigo.secao,
-                "descricao": codigo.descricao,
-                "html": codigo.html,
-                "css": codigo.css,
-                "javascript": codigo.javascript,
-                "techtml": codigo.techtml,
-                "teccss": codigo.teccss,
-                "tecjavascript": codigo.tecjavascript
-            }
-        )
+        res.json(codigo)
     })
 })
 
