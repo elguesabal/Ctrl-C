@@ -1,0 +1,16 @@
+.btnSearch {
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+}
+
+.lupaSearch {
+    transition: 1s;
+}
+
+.lupaSearch:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 10px 10px 200px 100px white;
+    scale: 1.2;
+}
+
