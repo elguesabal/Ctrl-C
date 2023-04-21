@@ -95,7 +95,7 @@ app.get('/teste', (req, res) => {
 
 app.get('/codigos', (req, res) => {
 
-  const sql = `SELECT * FROM codigo order by id desc`
+  const sql = `SELECT * FROM codigo ORDER BY id DESC`
 
   conn.query(sql, function (err, data) {
       if (err) {
@@ -124,6 +124,24 @@ app.get('/codigo', (req, res) => {
         const codigo = data[0]
         res.json(codigo)
     })
+})
+
+
+
+app.get('/busca', (req, res) => {
+
+  const secao = req.query.secao
+  const sql = `SELECT * FROM codigo WHERE secao LIKE '${secao}%' ORDER BY id DESC`
+
+  conn.query(sql, function (err, data) {
+      if (err) {
+          console.log(err)
+          return
+      }
+
+      const codigo = data
+      res.json(codigo)
+  })
 })
 
 
