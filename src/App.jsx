@@ -5,6 +5,7 @@ import './App.css'
 import './style/demonstracao.css'
 import './style/codigo.css'
 import './style/pagina template.css'
+import './style/introducao.css'
 
 
 import PaginaInicial from './paginas/pagina inicial'
