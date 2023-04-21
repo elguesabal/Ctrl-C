@@ -95,7 +95,7 @@ app.get('/teste', (req, res) => {
 
 app.get('/codigos', (req, res) => {
 
-  const sql = `SELECT * FROM codigo`
+  const sql = `SELECT * FROM codigo order by id desc`
 
   conn.query(sql, function (err, data) {
       if (err) {
