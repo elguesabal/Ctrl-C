@@ -11,12 +11,17 @@
     <script>
         const html = `${{{codigo.html}}}`
         const css = `${{{codigo.css}}}`
-
-
+        const javascript = `${{{codigo.javascript}}}`
 
         document.getElementById('codigo').innerHTML += html.substring(1)
         document.getElementById('codigo').innerHTML += css.substring(1)
 
+        setTimeout(function() {
+            document.getElementById('script').textContent += javascript.substring(1)
+        }, 1000)
     </script>
+    
+    <script id="script"></script>
+
 </body>
 </html>
