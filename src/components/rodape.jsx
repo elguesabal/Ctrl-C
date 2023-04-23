@@ -1,8 +1,29 @@
+import api from './api.js'
+import axios from 'axios'
+
 import url from "./url"
 
 function Rodape() {
 
-    const rotaMensagem = url + '/mensagem'
+    function enviarMensagem() {
+        const data = {
+            email: document.getElementById('email').value,
+            mensagem: document.getElementById('mensagem').value
+        }
+
+        api.post(url + '/mensagem', data)
+        .then(res => {
+            const resMensagem = document.getElementById('resMensagem')
+            resMensagem.style.display = res.data.display
+            resMensagem.textContent = res.data.mensagem
+            resMensagem.style.color = res.data.color
+
+            setTimeout(function() {
+                resMensagem.style.display = 'none'
+            }, 5000)
+        })
+        .catch(erro => alert(erro))
+    }
 
     return (
         <footer>
@@ -32,21 +53,20 @@ function Rodape() {
                         </div>
 
                         <div class="col-md-4 offset-md-1">
-                            <form action={rotaMensagem} method="post">
-                                <h1 class="h3 mb-3 fw-normal">Deixe sua mensagem!</h1>
+                            <h1 class="h3 mb-3 fw-normal">Deixe sua mensagem!</h1>
 
-                                <div class="form-floating">
-                                    <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
-                                    <label for="floatingInput">Email de contato</label>
-                                </div>
-                                <br />
-                                <div>
-                                    <label class="form-label">Mensagem:</label>
-                                    <textarea class="form-control" name="mensagem" rows="3"></textarea>
-                                </div>
-                                <br />
-                                <button class="w-100 btn btn-lg btn-primary" type="submit">Enviar</button>
-                            </form>
+                            <div class="form-floating">
+                                <input name="email" id="email" type="email" class="form-control" placeholder="name@example.com" />
+                                <label for="floatingInput">Email de contato</label>
+                            </div>
+                            <br />
+                            <div>
+                                <label class="form-label">Mensagem:</label>
+                                <textarea class="form-control" name="mensagem" id="mensagem" rows="3"></textarea>
+                            </div>
+                            <br />
+                            <p id="resMensagem"></p>
+                            <button class="w-100 btn btn-lg btn-primary" onClick={() => enviarMensagem()}>Enviar</button>
                         </div>
                         
                     </div>
