@@ -9,7 +9,7 @@ function Codigo() {
     const [linkVerCompleto, setLinkVerCompleto] = useState('')
 
     useEffect(() => {
-        const buscaId = window.location.search;
+        const buscaId = window.location.search
         
         api.get(`${url}/codigo${buscaId}`)
         .then(res => {
@@ -21,11 +21,10 @@ function Codigo() {
             document.getElementById('css').value = res.data.css
             document.getElementById('javascript').value = res.data.javascript
 
-            // document.getElementById('linkTemplate').href = `/template?id=${res.data.id}`
-            // const teste = `${url}/template?id=${res.data.id}`
-            
             setDemonstracao(`${url}/template${buscaId}`)
             setLinkVerCompleto(`/template${buscaId}`)
+            
+            document.getElementById('load').style.display = 'none'
         })
         .catch(erro => alert(erro))
     }, [])
@@ -33,8 +32,6 @@ function Codigo() {
     return (
         <main>
             <div class="demonstracao2">
-                {/* <div id="telaCheia" onclick="telaCheia()">tela cheia</div> */}
-                {/* <div id="iframe"></div> */}
                 <iframe id="iframe" src={demonstracao}></iframe>
             </div>
             <div class="codigo">

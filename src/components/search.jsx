@@ -35,6 +35,7 @@ function Search() {
                 `
             })
 
+            document.getElementById('load').style.display = 'none'
         })
         .catch(erro => alert(erro))
     }, [])

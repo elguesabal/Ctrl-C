@@ -6,6 +6,9 @@ import url from "./url"
 function Rodape() {
 
     function enviarMensagem() {
+
+        document.getElementById('load').style.display = 'flex'
+
         const data = {
             email: document.getElementById('email').value,
             mensagem: document.getElementById('mensagem').value
@@ -21,6 +24,8 @@ function Rodape() {
             setTimeout(function() {
                 resMensagem.style.display = 'none'
             }, 5000)
+            
+            document.getElementById('load').style.display = 'none'
         })
         .catch(erro => alert(erro))
     }
