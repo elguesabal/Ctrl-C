@@ -1,6 +1,7 @@
 // npm i express
 // npm install --save-dev nodemon
 // npm install cors
+// npm i dotenv
 // npm i mysql                          ANTIGO BANCO DE DADOS LOCAL
 // npm install dotenv mysql2
 // npm install handlebars
@@ -39,26 +40,29 @@ app.set('view engine', 'handlebars')
 
 
 // npm i mysql
-// const mysql = require('mysql')                                              ANTIGO BANCO DE DADOS LOCAL
-// const conn = mysql.createConnection({                                       ANTIGO BANCO DE DADOS LOCAL
-//     host: '127.0.0.1',
-//     port: '3306',
-//     user: 'root',
-//     password: '',
-//     database: 'ctrlc'
-// })
-// conn.connect(function (err) {                                               ANTIGO BANCO DE DADOS LOCAL
-//     if (err) {
-//         console.log(err);
-//     }
-//     console.log('Conectado com sucesso');
-// })
+const mysql = require('mysql')                                              // ANTIGO BANCO DE DADOS LOCAL
+const conn = mysql.createConnection({                                       // ANTIGO BANCO DE DADOS LOCAL
+    host: '127.0.0.1',
+    port: '3306',
+    user: 'root',
+    password: '',
+    database: 'ctrlc'
+})
+conn.connect(function (err) {                                               // ANTIGO BANCO DE DADOS LOCAL
+    if (err) {
+        console.log(err);
+    }
+    console.log('Conectado com sucesso');
+})
+
+
+// npm i dotenv
+require('dotenv').config()
 
 
 // npm install dotenv mysql2
-require('dotenv').config()                                                  // NOVO BANCO DE DADOS ONLINE NO RAILWAY
-const mysql = require('mysql2')                                             // NOVO BANCO DE DADOS ONLINE NO RAILWAY
-const conn = mysql.createConnection(process.env.DATABASE_URL)               // NOVO BANCO DE DADOS ONLINE NO RAILWAY
+// const mysql = require('mysql2')                                             // NOVO BANCO DE DADOS ONLINE NO RAILWAY
+// const conn = mysql.createConnection(process.env.DATABASE_URL)               // NOVO BANCO DE DADOS ONLINE NO RAILWAY
 
 
 // npm install --save body-parser
@@ -86,7 +90,6 @@ app.get('/teste', (req, res) => {
         }
 
         const codigo = data[0].descricao
-
         res.send(codigo)
     })
 })
@@ -373,10 +376,10 @@ app.post('/mensagem', (req, res) => {
     transport.sendMail(mensagens[0])
     .then((resposta) => {
         transport.sendMail(mensagens[1])
-        .then((resposta) => res.send('mensagem enviada'))
-        .catch((erro) => res.send(`ocorreu um erro: 2`))  
+        .then((resposta) => res.json({display: "block", color: "green" , mensagem: "Mensagem enviada!"}))
+        .catch((erro) => res.json({display: "block", color: "red" , mensagem: "Digite um e-mail existente"}))  
     })
-    .catch((erro) => res.send(`ocorreu um erro: 1`))
+    .catch((erro) => res.json({display: "block", color: "red" , mensagem: "Digite um e-mail existente!"}))
 })
 
 
