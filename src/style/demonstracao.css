@@ -46,8 +46,118 @@
     margin-left: 30px;
 }
 
-.demonstracao .informacoes .link {
-    margin-bottom: 50px;
+.containerBotao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.containerBotao .botoes {
+    position: relative;
+    width: 155px;
+    height: 50px;
+    margin: 20px;
+}
+
+.containerBotao .botoes a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color: black;
+    z-index: 1;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+}
+
+.containerBotao .botoes:hover a {
+    letter-spacing: 3px;
+    color: white;
+}
+
+.containerBotao .botoes a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+}
+
+.containerBotao .botoes:hover a::before {
+    transform: skewX(45deg) translateX(200%);
+}
+
+.containerBotao .botoes::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 0px;
+    height: 0px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.containerBotao .botoes:hover::before {
+    bottom: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.5s;
+}
+
+.containerBotao .botoes::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+    width: 0px;
+    height: 0px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.containerBotao .botoes:hover::after {
+    top: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.5s;
+}
+
+.containerBotao .botoes:nth-child(1)::before, 
+.containerBotao .botoes:nth-child(1)::after {
+    background: #ffbbcb;
+    box-shadow: 0 0 5px #ffbbcb, 0 0 15px #ffbbcb, 0 0 30px #ffbbcb, 0 0 60px #ffbbcb;
+}
+
+.containerBotao .botoes:nth-child(2)::before, 
+.containerBotao .botoes:nth-child(2)::after {
+    background: #b9f4ff;
+    box-shadow: 0 0 5px #b9f4ff, 0 0 15px #b9f4ff, 0 0 30px #b9f4ff, 0 0 60px #b9f4ff;
 }
 
 .demonstracao iframe {
