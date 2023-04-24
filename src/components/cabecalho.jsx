@@ -26,7 +26,7 @@ function Cabecalho() {
                         </button>
                     </form>
 
-                    <div class="dropdown text-end">
+                    {/* <div class="dropdown text-end">
                         <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="https://media.licdn.com/dms/image/D4D03AQE0ANrEe4uO7w/profile-displayphoto-shrink_400_400/0/1665860003192?e=1687392000&v=beta&t=nCotPlWqjK34LmY9X2Mg-XX2euA5WAIG_41V1klpzRs" alt="mdo" width="32" height="32" class="rounded-circle" />
                         </a>
@@ -37,7 +37,7 @@ function Cabecalho() {
                             <li><hr class="dropdown-divider" /></li>
                             <li><a class="dropdown-item" href="#">Sign out</a></li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </header>
