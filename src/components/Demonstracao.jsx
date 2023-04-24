@@ -24,9 +24,9 @@ function Demonstracao() {
                                 <li id="tecJavascript">JavaScript: ${codigo.tecjavascript}</li>
                             </ol>
                         </details>
-                        <div class="link">
-                            <a href="/template?id=${codigo.id}" target="_blank">Ver completo</a>
-                            <a href="/codigo?id=${codigo.id}">Ver código</a>
+                        <div class="containerBotao">
+                            <div class="botoes"><a href="/template?id=${codigo.id}" target="_blank">Ver</a></div>
+                            <div class="botoes"><a href="/codigo?id=${codigo.id}">Código</a></div>
                         </div>
                     </div>
     
