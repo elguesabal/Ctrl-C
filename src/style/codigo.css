@@ -77,3 +77,23 @@
     z-index: 1;
     resize: none;
 }
+
+@media (width < 800px) {
+    .demonstracao2 #iframe {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .codigo {
+        flex-direction: column;
+    }
+
+    .codigo .textareCodigo {
+        width: 90%;
+        margin: auto auto 100px auto;
+    }
+
+    .codigo .textareCodigo .codigoTexto {
+        width: 100%;
+    }
+}
