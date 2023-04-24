@@ -8,26 +8,60 @@
 .demonstracao2 #iframe {
     width: 70vw;
     height: 70vh;
-    /* width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 10;
-    top: 0; */
 }
 
-#telaCheia {
-    background-color: yellowgreen;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    bottom: 0;
-    right: 30vh;
+.telaCheia {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin-top: 20px;
+}
+
+.telaCheia svg {
+    width: 40px;
+    height: 40px;
+    color: black;
+    transition: 1s;
+}
+
+.telaCheia svg:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 10px 10px 200px 100px white;
+    padding-bottom: 10px;
 }
 
 .codigo {
     display: flex;
     justify-content: space-around;
-    margin: 50px 0 50px 0;
+    margin: 70px 0 50px 0;
+}
+
+.codigo .textareCodigo .copy {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 10px;
+}
+
+.codigo .textareCodigo .copy .status {
+    width: 70%;
+    text-align: end;
+    color: green;
+    display: none;
+}
+
+.codigo .textareCodigo .copy svg {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.codigo .textareCodigo .copy svg:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 10px 10px 200px 100px white;
+    padding-bottom: 5px;
 }
 
 .codigo .textareCodigo {
@@ -35,10 +69,11 @@
     flex-direction: column;
 }
 
-textarea {
+.textareCodigo textarea {
     background-color: rgba(240, 248, 255, 0.4);
     border: 0;
-    height: 100px;
+    height: 400px;
     width: 30vw;
     z-index: 1;
+    resize: none;
 }
