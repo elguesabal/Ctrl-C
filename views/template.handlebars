@@ -5,23 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style id="css">
+
+    </style>
 </head>
-<body id="codigo">
+<body id="html">
 
     <script>
         const html = `${{{codigo.html}}}`
         const css = `${{{codigo.css}}}`
         const javascript = `${{{codigo.javascript}}}`
 
-        document.getElementById('codigo').innerHTML += html.substring(1)
-        document.getElementById('codigo').innerHTML += css.substring(1)
+        document.getElementById('html').innerHTML += html.substring(1)
+        document.getElementById('css').textContent += css.substring(1)
 
         setTimeout(function() {
-            document.getElementById('script').textContent += javascript.substring(1)
-        }, 1000)
+            document.getElementById('javaScript').textContent += javascript.substring(1)
+        }, 10)
     </script>
     
-    <script id="script"></script>
+    <script id="javaScript"></script>
 
 </body>
 </html>
