@@ -8,6 +8,7 @@ import './style/pagina template.css'
 import './style/introducao.css'
 import './style/cabecalho.css'
 import './style/load.css'
+import './style/scroll.css'
 
 
 import PaginaInicial from './paginas/pagina inicial'
