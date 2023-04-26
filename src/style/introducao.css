@@ -1,3 +1,6 @@
-.cabecalho-ctrlC {
-    grid-template-columns: 1fr 2fr;
+@media (width < 800px) {
+    .cabecalho-ctrlC {
+        display: flex;
+        flex-direction: column;
+    }
 }
