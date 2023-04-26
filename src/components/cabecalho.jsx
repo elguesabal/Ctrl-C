@@ -11,10 +11,10 @@ function Cabecalho() {
                     </a>
 
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="#" class="nav-link px-2 link-body-emphasis">Header</a></li>
-                        <li><a href="#" class="nav-link px-2 link-body-emphasis">Footer</a></li>
-                        <li><a href="#" class="nav-link px-2 link-body-emphasis">Formulário</a></li>
-                        <li><a href="#" class="nav-link px-2 link-body-emphasis">Card</a></li>
+                        <li><a href="/search?secao=cabecalho" class="nav-link px-2 link-body-emphasis">Header</a></li>
+                        <li><a href="/search?secao=footer" class="nav-link px-2 link-body-emphasis">Footer</a></li>
+                        <li><a href="/search?secao=formulario" class="nav-link px-2 link-body-emphasis">Formulário</a></li>
+                        <li><a href="/search?secao=card" class="nav-link px-2 link-body-emphasis">Card</a></li>
                     </ul>
 
                     <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 d-flex flex-row-reverse" role="search" action="/search" method="get">
