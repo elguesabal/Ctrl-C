@@ -18,6 +18,9 @@ function Codigo() {
             document.getElementById('iframe').innerHTML += res.data.javascript
 
             document.getElementById('html').value = res.data.html
+            if (res.data.linkscript != null) {
+                document.getElementById('html').value += `<script src=${res.data.linkscript}></script>`
+            }
             document.getElementById('css').value = res.data.css
             document.getElementById('javascript').value = res.data.javascript
 
