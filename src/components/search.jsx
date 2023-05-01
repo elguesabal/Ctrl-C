@@ -5,8 +5,14 @@ import url from "./url"
 
 function Search() {
 
+    const [posicao, setPosicao] = useState(0)
+
     useEffect(() => {
-        api.get(`${url}/busca${window.location.search}`)
+
+        document.getElementById('container-load-demonstracao').style.display = 'flex'
+        document.getElementById('containerBotao').style.display = 'none'
+
+        api.get(`${url}/busca${window.location.search}&posicao=${posicao}`)
         .then(res => {
 
             res.data.forEach((codigo) => {
@@ -36,15 +42,31 @@ function Search() {
             })
 
             document.getElementById('load').style.display = 'none'
+            document.getElementById('container-load-demonstracao').style.display = 'none'
+            document.getElementById('containerBotao').style.display = 'flex'
         })
         .catch(erro => alert(erro))
-    }, [])
+        
+    }, [posicao])
 
 
     return (
-        <main id="search">
+        <div>
+            <main id="search"></main>
 
-        </main>
+            <div id="containerBotao" class="containerBotao">
+                <div class="botao-carregar-mais" onClick={() => setPosicao(posicao + 3)}><a>Carregar mais</a></div>
+            </div>
+
+
+            <div id="container-load-demonstracao">
+                <div class="load-demonstracao-wrapper">
+                    <div class="load-demonstracao">
+                        <div class="load-demonstracao load-demonstracao--inner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 

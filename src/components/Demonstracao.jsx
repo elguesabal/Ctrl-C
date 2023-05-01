@@ -39,12 +39,11 @@ function Demonstracao() {
                     <iframe src="${url}/template?id=${codigo.id}"></iframe>
                 </div>
                 `
-
-                document.getElementById('load').style.display = 'none'
-                document.getElementById('container-load-demonstracao').style.display = 'none'
-                document.getElementById('containerBotao').style.display = 'flex'
             })
 
+            document.getElementById('load').style.display = 'none'
+            document.getElementById('container-load-demonstracao').style.display = 'none'
+            document.getElementById('containerBotao').style.display = 'flex'
         })
         .catch(erro => alert(erro))
         
