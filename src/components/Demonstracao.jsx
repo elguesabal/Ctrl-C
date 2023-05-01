@@ -9,6 +9,9 @@ function Demonstracao() {
 
     useEffect(() => {
 
+        document.getElementById('container-load-demonstracao').style.display = 'flex'
+        document.getElementById('containerBotao').style.display = 'none'
+
         api.get(`${url}/codigos?posicao=${posicao}`)
         .then(res => {
 
@@ -38,6 +41,8 @@ function Demonstracao() {
                 `
 
                 document.getElementById('load').style.display = 'none'
+                document.getElementById('container-load-demonstracao').style.display = 'none'
+                document.getElementById('containerBotao').style.display = 'flex'
             })
 
         })
@@ -50,9 +55,19 @@ function Demonstracao() {
         <div>
             <main id="demonstracoes"></main>
 
-            <div onClick={() => setPosicao(posicao + 3)}>carregar mais</div>
-        </div>
+            <div id="containerBotao" class="containerBotao">
+                <div class="botao-carregar-mais" onClick={() => setPosicao(posicao + 3)}><a>Carregar mais</a></div>
+            </div>
 
+
+            <div id="container-load-demonstracao">
+                <div class="load-demonstracao-wrapper">
+                    <div class="load-demonstracao">
+                        <div class="load-demonstracao load-demonstracao--inner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 
