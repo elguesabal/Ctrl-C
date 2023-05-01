@@ -5,8 +5,11 @@ import url from './url.js'
 
 function Demonstracao() {
 
+    const [posicao, setPosicao] = useState(0)
+
     useEffect(() => {
-        api.get(`${url}/codigos`)
+
+        api.get(`${url}/codigos?posicao=${posicao}`)
         .then(res => {
 
             res.data.forEach((codigo) => {
@@ -39,13 +42,17 @@ function Demonstracao() {
 
         })
         .catch(erro => alert(erro))
-    }, [])
+        
+    }, [posicao])
 
 
     return (
-        <main id="demonstracoes">
+        <div>
+            <main id="demonstracoes"></main>
 
-        </main>
+            <div onClick={() => setPosicao(posicao + 3)}>carregar mais</div>
+        </div>
+
     )
 }
 
