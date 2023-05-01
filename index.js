@@ -98,7 +98,8 @@ app.get('/teste', (req, res) => {
 
 app.get('/codigos', (req, res) => {
 
-  const sql = `SELECT * FROM codigo ORDER BY id DESC`
+  const posicao = req.query.posicao
+  const sql = `SELECT * FROM codigo ORDER BY id DESC LIMIT ${posicao}, 3`
 
   conn.query(sql, function (err, data) {
       if (err) {
