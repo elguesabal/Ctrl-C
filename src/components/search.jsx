@@ -15,35 +15,46 @@ function Search() {
         api.get(`${url}/busca${window.location.search}&posicao=${posicao}`)
         .then(res => {
 
-            res.data.forEach((codigo) => {
-                document.getElementById('search').innerHTML += 
-                `
-                <hr/>
-                <div class="demonstracao">
-                    <div class="informacoes">
-                        <p>${codigo.descricao}</p>
-                        <details>
-                            <summary>Tecnologias usadas</summary>
-                            <ol>
-                                <li id="tecHtml">HTML5: ${codigo.techtml}</li>
-                                <li id="tecCss">CSS3: ${codigo.teccss}</li>
-                                <li id="tecJavascript">JavaScript: ${codigo.tecjavascript}</li>
-                            </ol>
-                        </details>
-                        <div class="containerBotao">
-                            <div class="botoes"><a href="/template?id=${codigo.id}" target="_blank">Ver</a></div>
-                            <div class="botoes"><a href="/codigo?id=${codigo.id}">Código</a></div>
-                        </div>
-                    </div>
-    
-                    <iframe src="${url}/template?id=${codigo.id}"></iframe>
-                </div>
-                `
-            })
+            if (res.data.length != 0) {
 
-            document.getElementById('load').style.display = 'none'
-            document.getElementById('container-load-demonstracao').style.display = 'none'
-            document.getElementById('containerBotao').style.display = 'flex'
+                res.data.forEach((codigo) => {
+                    document.getElementById('search').innerHTML += 
+                    `
+                    <hr/>
+                    <div class="demonstracao">
+                        <div class="informacoes">
+                            <p>${codigo.descricao}</p>
+                            <details>
+                                <summary>Tecnologias usadas</summary>
+                                <ol>
+                                    <li id="tecHtml">HTML5: ${codigo.techtml}</li>
+                                    <li id="tecCss">CSS3: ${codigo.teccss}</li>
+                                    <li id="tecJavascript">JavaScript: ${codigo.tecjavascript}</li>
+                                </ol>
+                            </details>
+                            <div class="containerBotao">
+                                <div class="botoes"><a href="/template?id=${codigo.id}" target="_blank">Ver</a></div>
+                                <div class="botoes"><a href="/codigo?id=${codigo.id}">Código</a></div>
+                            </div>
+                        </div>
+        
+                        <iframe src="${url}/template?id=${codigo.id}"></iframe>
+                    </div>
+                    `
+                })
+    
+                document.getElementById('load').style.display = 'none'
+                document.getElementById('container-load-demonstracao').style.display = 'none'
+                document.getElementById('containerBotao').style.display = 'flex'
+
+            } else {
+    
+                document.getElementById('container-acabou').style.display = 'flex'
+                document.getElementById('container-load-demonstracao').style.display = 'none'
+
+            }
+
+
         })
         .catch(erro => alert(erro))
         
@@ -65,6 +76,10 @@ function Search() {
                         <div class="load-demonstracao load-demonstracao--inner"></div>
                     </div>
                 </div>
+            </div>
+
+            <div id="container-acabou">
+                <h3>Não há mais códigos para ser exibidos!</h3>
             </div>
         </div>
     )
