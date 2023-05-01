@@ -40,20 +40,20 @@ app.set('view engine', 'handlebars')
 
 
 // npm i mysql
-const mysql = require('mysql')                                              // ANTIGO BANCO DE DADOS LOCAL
-const conn = mysql.createConnection({                                       // ANTIGO BANCO DE DADOS LOCAL
-    host: '127.0.0.1',
-    port: '3306',
-    user: 'root',
-    password: '',
-    database: 'ctrlc'
-})
-conn.connect(function (err) {                                               // ANTIGO BANCO DE DADOS LOCAL
-    if (err) {
-        console.log(err);
-    }
-    console.log('Conectado com sucesso');
-})
+// const mysql = require('mysql')                                              // ANTIGO BANCO DE DADOS LOCAL
+// const conn = mysql.createConnection({                                       // ANTIGO BANCO DE DADOS LOCAL
+//     host: '127.0.0.1',
+//     port: '3306',
+//     user: 'root',
+//     password: '',
+//     database: 'ctrlc'
+// })
+// conn.connect(function (err) {                                               // ANTIGO BANCO DE DADOS LOCAL
+//     if (err) {
+//         console.log(err);
+//     }
+//     console.log('Conectado com sucesso');
+// })
 
 
 // npm i dotenv
@@ -61,8 +61,8 @@ require('dotenv').config()
 
 
 // npm install dotenv mysql2
-// const mysql = require('mysql2')                                             // NOVO BANCO DE DADOS ONLINE NO RAILWAY
-// const conn = mysql.createConnection(process.env.DATABASE_URL)               // NOVO BANCO DE DADOS ONLINE NO RAILWAY
+const mysql = require('mysql2')                                             // NOVO BANCO DE DADOS ONLINE NO RAILWAY
+const conn = mysql.createConnection(process.env.DATABASE_URL)               // NOVO BANCO DE DADOS ONLINE NO RAILWAY
 
 
 // npm install --save body-parser
