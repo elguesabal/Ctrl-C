@@ -209,6 +209,11 @@
     }
 }
 
+#container-acabou {
+    display: none;
+    justify-content: center;
+}
+
 @media (width < 800px) {
     .demonstracao {
         flex-direction: column;
