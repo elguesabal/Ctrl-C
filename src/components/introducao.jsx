@@ -29,7 +29,7 @@ function Introducao() {
                                 <p class="mx-auto fs-5 text-muted">Basta com alguns clicks selecionar o template desejado Apertar Ctrl + C e seu código já estará pronto para uso.</p>
                             </div>
                             <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-                                <img class="rounded-lg-3" src="/site.png" alt="" width="720" />
+                                <img class="rounded-lg-3" src="/ctrl-c.gif" alt="" width="720" />
                             </div>
                         </div>
                     </div>
