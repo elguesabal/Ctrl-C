@@ -1,4 +1,4 @@
-@media (width < 1500px) {
+@media (width < 12000px) {
     .cabecalho-ctrlC {
         display: flex;
         flex-direction: column;
