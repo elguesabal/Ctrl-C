@@ -214,7 +214,7 @@
     justify-content: center;
 }
 
-@media (width < 12000px) {
+@media (width < 1200px) {
     .demonstracao {
         flex-direction: column;
         height: auto;
