@@ -78,7 +78,7 @@
     resize: none;
 }
 
-@media (width < 1000px) {
+@media (width < 1500px) {
     .demonstracao2 #iframe {
         width: 90vw;
         height: 90vh;
