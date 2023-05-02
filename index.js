@@ -24,8 +24,14 @@ app.use(express.json())
 
 
 // npm install cors
-// const cors = require('cors')                                                 // DESATIVANDO PQ PARECE Q O VERCEL TA BLOQUEANDO O CORS
-// app.use(cors())
+const cors = require('cors')
+app.use((req, res, next) => {
+  req.header('Access-Control-Allow-Origin', 'https://ctrl-c-nine.vercel.app')
+  res.header('Acces-Control-Allow-Methods', 'GET,POST')
+  app.use(cors())
+  next()
+})
+
 
 
 // npm install handlebars
