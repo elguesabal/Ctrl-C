@@ -24,8 +24,8 @@ app.use(express.json())
 
 
 // npm install cors
-const cors = require('cors')
-app.use(cors())
+// const cors = require('cors')                                                 // DESATIVANDO PQ PARECE Q O VERCEL TA BLOQUEANDO O CORS
+// app.use(cors())
 
 
 // npm install handlebars
