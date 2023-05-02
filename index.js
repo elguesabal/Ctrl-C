@@ -26,7 +26,7 @@ app.use(express.json())
 // npm install cors
 const cors = require('cors')
 app.use((req, res, next) => {
-  req.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Origin', 'https://ctrl-c-nine.vercel.app')
   res.header('Acces-Control-Allow-Methods', 'GET,POST')
   app.use(cors())
   next()
