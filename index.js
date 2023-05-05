@@ -142,7 +142,7 @@ app.get('/busca', (req, res) => {
 
   const secao = req.query.secao
   const posicao = req.query.posicao
-  const sql = `SELECT * FROM codigo WHERE secao LIKE '${secao}%' ORDER BY id DESC LIMIT ${posicao}, 3`
+  const sql = `SELECT * FROM codigo WHERE secao LIKE '%${secao}%' ORDER BY id DESC LIMIT ${posicao}, 3`
 
   conn.query(sql, function (err, data) {
       if (err) {
