@@ -55,7 +55,15 @@ function Demonstracao() {
             }
 
         })
-        .catch(erro => alert(erro))
+        .catch(erro => {
+            document.getElementById('demonstracoes').textContent = 'Por questões de limitações do banco de dados este site só fica ativo durante o dia 1 até o dia 20 de cada mês'
+            document.getElementById('demonstracoes').style.textAlign = 'center'
+            document.getElementById('demonstracoes').style.margin = '80px 0 80px 0'
+            document.getElementById('demonstracoes').style.fontSize = '20pt'
+
+            document.getElementById('load').style.display = 'none'
+            document.getElementById('container-load-demonstracao').style.display = 'none'
+        })
         
     }, [posicao])
 
