@@ -38,7 +38,7 @@ function Rodape() {
 
                         <div class="col-6 col-md-3 m-auto">
                             <div class="d-flex justify-content-center">
-                                <img src="https://media.licdn.com/dms/image/D4D03AQE0ANrEe4uO7w/profile-displayphoto-shrink_400_400/0/1665860003192?e=1694044800&v=beta&t=tQnRGyBVJEK5BG4GKv32ja9vBdd6riABrH_ROetB9i4" width="140" height="140" alt="Foto do autor" />
+                                <img src="https://media.licdn.com/dms/image/D4D03AQE0ANrEe4uO7w/profile-displayphoto-shrink_400_400/0/1665860003192?e=1694044800&v=beta&t=tQnRGyBVJEK5BG4GKv32ja9vBdd6riABrH_ROetB9i4" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Foto do autor" />
                             </div>
                             <div class="mt-1">
                                 <p class="text-center m-0">José Antonio</p>
