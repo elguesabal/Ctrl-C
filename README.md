@@ -1,3 +1,3 @@
 # Ctrl-C
 
-link: https://ctrl-c-servidor.vercel.app/
+link: https://ctrl-c-servidor.vercel.app
